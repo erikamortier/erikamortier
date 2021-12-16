@@ -1,0 +1,35 @@
+
+
+/*useEffect (
+    ()=>{
+        const promisa = new promise ((res,rej)=>{
+            setTimeout(()=>{
+                res(producto)
+            }, 2000)
+        })
+        promesa.then((productos)=>{
+            console.log(productos)
+        })
+        .catch(()=>{
+            console.log("todo mal")
+        })
+    }, 
+    [])*/
+
+
+
+let productos = [
+    {
+      "id": "producto1",
+      "titulo": "placa de video",
+      "descripcion ": "amd 6700xt",
+      "precio": 1200
+    },
+    {"id": "producto2",
+    "titulo": "microprocesador",
+    "descripcion ": "intelg4560",
+    "precio": 100},
+    {"id": "producto3",
+    "titulo": "memoria ram",
+    "descripcion ": "8gb ddr4",
+    "precio": 25}]

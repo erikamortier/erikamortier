@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const ItemCount = ({onAdd, stock, initial, carrito}) =>  {
     const [contador, setContador] = useState(initial)
@@ -19,7 +19,9 @@ const ItemCount = ({onAdd, stock, initial, carrito}) =>  {
         carrito = []
       }
 
-
+      useEffect(()=>{
+          setTimeout(()=>{}, 2000)
+      }, [])
 
     return(
         <>
