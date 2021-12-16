@@ -1,8 +1,8 @@
 import Item from "./Item"
 
-const ItemList = ({productos}) => {
+const ItemList = ({lista}) => {
 
-    let item =  productos.map((e)=>{
+    let item =  lista.map((e)=>{
         return(
            <li>{e.titulo}</li> )
         

@@ -1,6 +1,6 @@
 import ItemCount from './ItemCount';
 import ItemList from './ItemList';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const onAdd =(a)=>{
     carrito.push()
@@ -35,6 +35,8 @@ let productos = [
 
 const ItemListContainer = ({nombre, apellidos}) => {
 
+    const [lista, setLista] = useState([])
+
     useEffect(()=>{
         const promesa = new Promise ((res,rej)=>{
             setTimeout(()=>{
@@ -43,7 +45,7 @@ const ItemListContainer = ({nombre, apellidos}) => {
         })
         promesa.then((productos)=>{
             console.log("se cargo la promesa")
-            console.log(productos)
+            setLista(productos)
             
         })
         .catch(()=>{
@@ -56,7 +58,7 @@ const ItemListContainer = ({nombre, apellidos}) => {
 
     <h1>Hola {nombre} {apellidos[1]}</h1>
     <ItemCount onAdd={onAdd} initial={initial} stock={stock} carrito={carrito} />
-    <ItemList productos={productos}  />
+    <ItemList lista={lista}  />
     </>
     )
 }
