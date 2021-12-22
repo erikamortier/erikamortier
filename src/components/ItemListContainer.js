@@ -23,7 +23,8 @@ let productos = [
     {"id": "producto2",
     "titulo": "microprocesador",
     "descripcion ": "intelg4560",
-    "precio": 100},
+    "precio": 100
+    },
     {"id": "producto3",
     "titulo": "memoria ram",
     "descripcion ": "8gb ddr4",
