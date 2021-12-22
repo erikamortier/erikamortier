@@ -1,10 +1,9 @@
-const Item = ({item}) => {
+const Item = ({titulo}) => {
 
     return (
-        <><p>Esto es Item</p><ul>
-            {item}
         
-        </ul></>
+        <ul><li> {titulo} </li> </ul>
+        
 
     )
 

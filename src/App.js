@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from "./components/Navbar";
 import CartWidget from './components/CartWidget';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 
 
@@ -19,6 +20,7 @@ function App () {
     <Navbar/>
     <CartWidget/>
     <ItemListContainer nombre="Erika" apellidos={apellidos}/>
+    <ItemDetailContainer />
 
 
 
