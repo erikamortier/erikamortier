@@ -7,8 +7,10 @@ const ItemDetail = ({lista} ) => {
 
 <ul>
          {lista.map((e)=>{
-        return(
-          <li>  {e.descripcion} </li> )
+        return(<>
+        <li>  {e.id} </li>
+        <li>  {e.descripcion} </li>
+        <li>  {e.precio} </li> </>)
         
     })}
    
