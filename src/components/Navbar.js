@@ -1,20 +1,27 @@
-const Navbar = () =>  {
-    return(
-        <nav>
-  <span>
-    Este es el titulo de la tienda
-  </span>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#cat-uno">Categoria Uno</a></li>
-      <li><a href="#cat-dos">Categoria Dos</a></li>
-      <li><a href="cat-tres">Categoria Tres</a></li>
-    </ul>
+import { Link } from "react-router-dom"
+
+const Navbar = ({links}) =>  {
+  return(
+      <nav>
+<span>
+  Este es el titulo de la tienda
+</span>
+  <ul>
+
+    {links.map((e)=> {
+      return (
+        <li>
+        <Link to={e.href}> {e.name} </Link>
+        </li>
+    )
+    })}
+
+  </ul>
 
 
 
 </nav>
-    )
+  )
 }
 
 export default Navbar

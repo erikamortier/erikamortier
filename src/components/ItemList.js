@@ -4,7 +4,7 @@ const ItemList = ({lista}) => {
 
   
 
-
+<Item lista={lista} />
 
     return (
         <>

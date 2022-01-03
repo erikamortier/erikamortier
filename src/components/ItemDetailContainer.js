@@ -1,43 +1,28 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 import ItemDetail from "./ItemDetail"
 
 
 
-let detalles = [
-    {
-      "id": "producto1",
-      "titulo": "placa de video",
-      "descripcion": "amd 6700xt",
-      "precio": 1200
-    },
-    {"id": "producto2",
-    "titulo": "microprocesador",
-    "descripcion": "intelg4560",
-    "precio": 100
-    },
-    {"id": "producto3",
-    "titulo": "memoria ram",
-    "descripcion": "8gb ddr4",
-    "precio": 25}]
 
 
-
-
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({productos} ) => {
 
 
 
         const [lista, setLista] = useState([])
+        
+        useParams()
 
         useEffect(()=>{
             const promesa = new Promise ((res,rej)=>{
                 setTimeout(()=>{
-                    res(detalles)
+                    res(productos)
                 }, 2000)
             })
-            promesa.then((detalles)=>{
+            promesa.then((productos)=>{
                 console.log("se cargo la promesa")
-                setLista(detalles)
+                setLista(productos)
                 
             })
             .catch(()=>{
