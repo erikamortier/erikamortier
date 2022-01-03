@@ -11,13 +11,13 @@ const ItemDetailContainer = ({productos} ) => {
 
 
         const [lista, setLista] = useState([])
-        
-        useParams()
+
+        const {id} = useParams()
 
         useEffect(()=>{
             const promesa = new Promise ((res,rej)=>{
                 setTimeout(()=>{
-                    res(productos)
+                    res(`productos.${id}`)
                 }, 2000)
             })
             promesa.then((productos)=>{

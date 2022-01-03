@@ -29,11 +29,7 @@ const ItemListContainer = ({nombre, apellidos, productos}) => {
 
     useEffect(()=>{
 
-        if(id){
 
-        }else{
-
-        };
 
 
 

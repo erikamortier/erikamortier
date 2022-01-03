@@ -4,7 +4,7 @@ const ItemList = ({lista}) => {
 
   
 
-<Item lista={lista} />
+
 
     return (
         <>
@@ -14,7 +14,7 @@ const ItemList = ({lista}) => {
 <div>
          {lista.map((e)=>{
         return(
-           < Item titulo={e.titulo} /> )
+           < Item lista={e} /> )
         
     })}
    
