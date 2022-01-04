@@ -22,7 +22,7 @@ const ItemDetailContainer = ({productos} ) => {
             })
             promesa.then((productos)=>{
                 console.log("se cargo la promesa")
-                setLista(productos.{id})
+                setLista(productos.filter(producto => producto.id === id))
                 
             })
             .catch(()=>{
