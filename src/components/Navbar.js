@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 const Navbar = ({links}) =>  {
   return(
       <nav>
-<span>
-  Este es el titulo de la tienda
-</span>
+<Link to="/">
+  Este es el Brand de la tienda
+</Link>
   <ul>
 
     {links.map((e)=> {

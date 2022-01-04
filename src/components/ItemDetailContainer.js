@@ -17,12 +17,12 @@ const ItemDetailContainer = ({productos} ) => {
         useEffect(()=>{
             const promesa = new Promise ((res,rej)=>{
                 setTimeout(()=>{
-                    res(`productos.${id}`)
+                    res(productos)
                 }, 2000)
             })
             promesa.then((productos)=>{
                 console.log("se cargo la promesa")
-                setLista(productos)
+                setLista(productos.{id})
                 
             })
             .catch(()=>{

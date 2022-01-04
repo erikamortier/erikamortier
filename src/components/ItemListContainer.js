@@ -29,10 +29,6 @@ const ItemListContainer = ({nombre, apellidos, productos}) => {
 
     useEffect(()=>{
 
-
-
-
-
         const promesa = new Promise ((res,rej)=>{
             setTimeout(()=>{
                 res(productos)

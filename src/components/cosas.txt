@@ -1,0 +1,5 @@
+falta hacer el filtro de las categorias. tengo que buscar un componente parecido al map pero que filtre. como un .filter
+
+
+falta el ${id} en las dos promesas para que filtre y muestre el detalle solo del productoi que estoy clickeando
+

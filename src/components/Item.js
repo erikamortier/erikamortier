@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 
-const Item = ({lista}) => {
+const Item = ({titulo, id, precio}) => {
 
     return (
         <>
-        <ul><li> {lista.titulo} </li> 
-        <li> {lista.precio} </li> </ul>
-        <Link to={`/item-detail/${lista.id}`}><button>Ver Detalle</button></Link> 
+        <ul><li> {titulo} </li> 
+        <li> {precio} </li> </ul>
+        <Link to={`/item-detail/${id}`}><button>Ver Detalle</button></Link> 
         
         </>
     )

@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home';
 import Navbar from "./components/Navbar";
 import CartWidget from './components/CartWidget';
 import ItemListContainer from './components/ItemListContainer';
@@ -85,7 +86,7 @@ function App () {
     <Navbar links={links}/>
     <CartWidget/>
     <Routes>
-      <Route path="/home" element="" />
+      <Route path="/home" element={<Home />} />
       <Route path="/productos" element={<ItemListContainer productos={productos} nombre="Erika" apellidos={apellidos}/>} />
       <Route path="/carrito" element={<CartWidget/>} />
       <Route path="/categoria/:id" element={<ItemListContainer nombre="Erika" apellidos={apellidos}/>} />
