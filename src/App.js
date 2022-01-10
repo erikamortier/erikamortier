@@ -16,53 +16,70 @@ function App () {
     "categoria": "placas de video",
     "titulo": "AMD 6700xt",
     "descripcion": "PowerColor - Hellhound",
-    "precio": 1200
+    "precio": 1200,
+    "imagen": "/evoltek.png",
+    "stock": 2
     },
     {
     "id": "producto2",
     "categoria": "placas de video",
     "titulo": "NVidia 3090",
     "descripcion": "Colorful triple fan",
-    "precio": 3200
+    "precio": 3200,
+    "imagen": "/evoltek.png",
+    "stock": 4
     },
     {
     "id": "producto3",
     "categoria": "placas de video",
     "titulo": "GeForce 3070",
     "descripcion": "MSI Ventus 3",
-    "precio": 1700
+    "precio": 1700,
+    "imagen": "/evoltek.png",
+    "stock": 5
     },
     {"id": "producto4",
     "categoria": "perifericos",
     "titulo": "Microprocesador",
     "descripcion": "intelg4560",
-    "precio": 100
+    "precio": 100,
+    "imagen": "/evoltek.png",
+    "stock": 7
     },
     {"id": "producto5",
     "categoria": "perifericos",
     "titulo": "Memoria ram",
     "descripcion": "8gb ddr4",
-    "precio": 25},
+    "precio": 25,
+    "imagen": "/evoltek.png",
+    "stock": 1
+    },
     {
     "id": "producto6",
     "categoria": "fuentes",
     "titulo": "Prime  gx-1300",
     "descripcion": "80 plus gold",
-    "precio": 500
+    "precio": 500,
+    "imagen": "/evoltek.png",
+    "stock": 3
     },
     {
     "id": "producto7",
     "categoria": "fuentes",
     "titulo": "Thermaltek 750w",
     "descripcion": "80 plus gold",
-    "precio": 100
+    "precio": 100,
+    "imagen": "/evoltek.png",
+    "stock": 5
     },
     {
     "id": "producto8",
     "categoria": "fuentes",
     "titulo": "HP 1200",
     "descripcion": "Server Patinum 95%",
-    "precio": 300
+    "precio": 300,
+    "imagen": "/evoltek.png",
+    "stock": 5
     },
     
 ]

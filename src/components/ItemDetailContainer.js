@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import ItemDetail from "./ItemDetail"
 
 
-
+ 
 
 
 const ItemDetailContainer = ({productos} ) => {

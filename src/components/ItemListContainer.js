@@ -1,24 +1,8 @@
-import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const onAdd =(a)=>{
-    carrito.push()
-  }
 
-const initial = 0
-
-let stock = 5
-
-let carrito = []
-
-
-
-
-
-
-    
 
 
 const ItemListContainer = ({nombre, apellidos, productos}) => {
@@ -48,7 +32,6 @@ const ItemListContainer = ({nombre, apellidos, productos}) => {
         <>
 
     <h1>Hola {nombre} {apellidos[1]}</h1>
-    <ItemCount onAdd={onAdd} initial={initial} stock={stock} carrito={carrito} />
     <ItemList lista={lista}  />
     </>
     )
