@@ -5,7 +5,8 @@ import Navbar from "./components/Navbar";
 import CartWidget from './components/CartWidget';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
-import {BrowserRouter, Routes, Route } from "react-router-dom"
+import {BrowserRouter, Routes, Route } from "react-router-dom"; 
+import CustomProvider, {Provider} from "./components/CartContext";
 
 
 function App () {
@@ -97,8 +98,10 @@ function App () {
     {href: "/item-detail", name: "Item Detail"}
   ]
 
-
+const valorDelContexto = {cantidad_total: 0 , carrito: []}
   return (
+    <CustomProvider>
+
     <BrowserRouter>
     <Navbar links={links}/>
     <CartWidget/>
@@ -113,7 +116,6 @@ function App () {
 
 
 
-
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -122,12 +124,14 @@ function App () {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
-        >
+          >
           Learn React
         </a>
       </header>
     </div>
-    </BrowserRouter>
+          </BrowserRouter>
+             </CustomProvider>
+    
   );
 }
 
