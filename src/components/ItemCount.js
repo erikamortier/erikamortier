@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react"
+import { useContexto } from "./CartContext"
 
-const ItemCount = ({onAdd, stock, initial, carrito}) =>  {
+const ItemCount = ({onAdd, stock, initial, carrito, producto}) =>  {
+  const {limpiarCarrito} = useContexto()
+
+
     const [contador, setContador] = useState(initial)
 
     const sumar = () => {
@@ -16,7 +20,7 @@ const ItemCount = ({onAdd, stock, initial, carrito}) =>  {
       }
 
       const reset = () => {
-        carrito = []
+        limpiarCarrito()
       }
 
       useEffect(()=>{
@@ -30,7 +34,7 @@ const ItemCount = ({onAdd, stock, initial, carrito}) =>  {
     <button onClick={restar}>Restar</button>
     <button onClick={onAdd(contador)}>Agregar al carrito</button>
     <button onClick={reset}>Borrar carrito</button>
-    <p>Carrito: {carrito}</p>
+    <p>Carrito: {carrito} {producto} </p>
 
         </>
 

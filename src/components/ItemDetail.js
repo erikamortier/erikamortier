@@ -1,9 +1,16 @@
 import ItemCount from "./ItemCount"
+import { useContexto } from "./CartContext"
+
 
 const ItemDetail = ({lista} ) => {
 
-    const onAdd =(a)=>{
-        carrito.push()
+    const {limpiarCarrito, agregarAlCarrito} = useContexto()
+
+
+    let carrito = [] 
+
+    const onAdd =(contador, lista)=>{
+        agregarAlCarrito(contador, lista)
       }
     
     const initial = 0
@@ -14,7 +21,12 @@ const ItemDetail = ({lista} ) => {
         
     })
     
-    let carrito = [] 
+
+    const producto = lista.map((e)=>{
+        return (
+            e.titulo
+        )
+    })
 
     return (<>
     
@@ -30,7 +42,7 @@ const ItemDetail = ({lista} ) => {
             })}
         
         </ul>
-    <ItemCount onAdd={onAdd} initial={initial} stock={stock} carrito={carrito} />
+    <ItemCount onAdd={onAdd} initial={initial} stock={stock} carrito={carrito} producto={producto} />
 </>
 )
 

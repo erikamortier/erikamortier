@@ -19,21 +19,27 @@ export const CustomProvider = ({children}) => {
     
     //agregaralcarrito
     const agregarAlCarrito = (producto, cantidad) => {
-        if(isInCarrito()){ //tengo que sumar sin agregar el producto
+
+        console.log(producto, cantidad)
+
+       // if(isInCarrito()){ //tengo que sumar sin agregar el producto
+
             
-        }else {
-            //tengo que sumar el prodcuto
-        }
+       // }else {
+            //tengo que sumar el prodcuto spread (...carrito)
+       // }
     }
    
-    const borrarDelCarrito = (id) => {
+    const borrarDelCarrito = (id) => { //filter
+        carrito.filter(e=> e === id) //aca tengo que asiciarlo con el producto del boton que esta tocando)
     
     }
 
     const limpiarCarrito = ( ) => {setCarrito ([])}
 
     const isInCarrito = (id) => {
-        //return true o false
+        //return true o false. buscar con find
+        carrito.find(e => e == carrito.id)
     }
 
     const valorDelContexto = {
