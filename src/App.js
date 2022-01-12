@@ -98,7 +98,6 @@ function App () {
     {href: "/item-detail", name: "Item Detail"}
   ]
 
-const valorDelContexto = {cantidad_total: 0 , carrito: []}
   return (
     <CustomProvider>
 
@@ -109,7 +108,7 @@ const valorDelContexto = {cantidad_total: 0 , carrito: []}
       <Route path="/home" element={<Home />} />
       <Route path="/productos" element={<ItemListContainer productos={productos} nombre="Erika" apellidos={apellidos}/>} />
       <Route path="/carrito" element={<CartWidget/>} />
-      <Route path="/categoria/:id" element={<ItemListContainer nombre="Erika" apellidos={apellidos}/>} />
+      <Route path="/categoria/:id" element={<ItemListContainer productos={productos} nombre="Erika" apellidos={apellidos}/>} />
       <Route path="/item-detail/:id" element={<ItemDetailContainer productos={productos} />} />
       
     </Routes>
@@ -129,8 +128,8 @@ const valorDelContexto = {cantidad_total: 0 , carrito: []}
         </a>
       </header>
     </div>
-          </BrowserRouter>
-             </CustomProvider>
+    </BrowserRouter>
+    </CustomProvider>
     
   );
 }

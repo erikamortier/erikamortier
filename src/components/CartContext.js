@@ -20,7 +20,8 @@ export const CustomProvider = ({children}) => {
     //agregaralcarrito
     const agregarAlCarrito = (producto, cantidad) => {
 
-        console.log(producto, cantidad)
+        setCarrito([...carrito, {producto: producto , cantidad: cantidad}]);
+        console.log("se agregaron al carrito los productos")
 
        // if(isInCarrito()){ //tengo que sumar sin agregar el producto
 
@@ -31,7 +32,7 @@ export const CustomProvider = ({children}) => {
     }
    
     const borrarDelCarrito = (id) => { //filter
-        carrito.filter(e=> e === id) //aca tengo que asiciarlo con el producto del boton que esta tocando)
+        setCarrito(carrito.filter(e=> e.id !== id)) //aca tengo que asiciarlo con el producto del boton que esta tocando)
     
     }
 

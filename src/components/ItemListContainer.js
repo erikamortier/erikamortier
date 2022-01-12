@@ -19,7 +19,7 @@ const ItemListContainer = ({nombre, apellidos, productos}) => {
             }, 2000)
         })
         promesa.then((productos)=>{
-            console.log("se cargo la promesa")
+            console.log("se cargo la promesa") 
             setLista(productos)
             
         })
